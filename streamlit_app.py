@@ -92,6 +92,7 @@ if "symptoms" not in st.session_state:
 if st.button("Add Symptom"):
     if symptom not in st.session_state["symptoms"]:
         st.session_state["symptoms"].append(symptom)
+        st.success(f"Symptom '{symptom}' added!")
 st.write("Symptoms:", st.session_state["symptoms"])
 
 # Food Allergies
@@ -102,6 +103,7 @@ if "food_allergies" not in st.session_state:
 if st.button("Add Food Allergy"):
     if food_allergy not in st.session_state["food_allergies"]:
         st.session_state["food_allergies"].append(food_allergy)
+        st.success(f"Food Allergy '{food_allergy}' added!")
 st.write("Food Allergies:", st.session_state["food_allergies"])
 
 # Medicine Allergies
@@ -112,6 +114,7 @@ if "medicine_allergies" not in st.session_state:
 if st.button("Add Medicine Allergy"):
     if medicine_allergy not in st.session_state["medicine_allergies"]:
         st.session_state["medicine_allergies"].append(medicine_allergy)
+        st.success(f"Medicine Allergy '{medicine_allergy}' added!")
 st.write("Medicine Allergies:", st.session_state["medicine_allergies"])
 
 # Lifestyle Factors
@@ -122,6 +125,7 @@ if "lifestyle_factors" not in st.session_state:
 if st.button("Add Lifestyle Factor"):
     if lifestyle not in st.session_state["lifestyle_factors"]:
         st.session_state["lifestyle_factors"].append(lifestyle)
+        st.success(f"Lifestyle Factor '{lifestyle}' added!")
 st.write("Lifestyle Factors:", st.session_state["lifestyle_factors"])
 
 # Medical Conditions
@@ -132,6 +136,7 @@ if "medical_conditions" not in st.session_state:
 if st.button("Add Medical Condition"):
     if medical_condition not in st.session_state["medical_conditions"]:
         st.session_state["medical_conditions"].append(medical_condition)
+        st.success(f"Medical Condition '{medical_condition}' added!")
 st.write("Medical Conditions:", st.session_state["medical_conditions"])
 
 # Check Conditions
