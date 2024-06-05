@@ -1,0 +1,25 @@
+{
+    "SymptomDiseaseMapping": [
+        {"SymptomID": 1, "DiseaseID": 1},
+        {"SymptomID": 2, "DiseaseID": 1},
+        {"SymptomID": 2, "DiseaseID": 2},
+        {"SymptomID": 5, "DiseaseID": 2},
+        {"SymptomID": 3, "DiseaseID": 3},
+        {"SymptomID": 4, "DiseaseID": 3},
+        {"SymptomID": 1, "DiseaseID": 5},
+        {"SymptomID": 5, "DiseaseID": 5},
+        {"SymptomID": 2, "DiseaseID": 6},
+        {"SymptomID": 6, "DiseaseID": 6},
+        {"SymptomID": 4, "DiseaseID": 4},
+        {"SymptomID": 5, "DiseaseID": 4}
+    ],
+    "DiseaseMedicationMapping": [
+        {"DiseaseID": 1, "MedicationID": 1},
+        {"DiseaseID": 1, "MedicationID": 6},
+        {"DiseaseID": 2, "MedicationID": 2},
+        {"DiseaseID": 3, "MedicationID": 3},
+        {"DiseaseID": 4, "MedicationID": 4},
+        {"DiseaseID": 5, "MedicationID": 5},
+        {"DiseaseID": 6, "MedicationID": 5}
+    ]
+}
