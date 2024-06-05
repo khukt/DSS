@@ -1,0 +1,76 @@
+ {
+    "Patients": [
+        {
+            "PatientID": 1,
+            "Name": "John Doe",
+            "Age": 45,
+            "Gender": "Male",
+            "Address": "123 Main St",
+            "ContactInfo": "john@example.com",
+            "BloodType": "A",
+            "Region": "Canada",
+            "WeightKg": 70,
+            "Diagnoses": [
+                {
+                    "DiagnosisID": 1,
+                    "DiseaseID": 1,
+                    "DateDiagnosed": "2023-01-15",
+                    "PredictionProbability": 0.8,
+                    "Symptoms": [
+                        {"SymptomID": 1, "SymptomName": "Fever"},
+                        {"SymptomID": 2, "SymptomName": "Cough"}
+                    ],
+                    "Medications": [
+                        {"MedicationID": 1, "MedicationName": "Antiviral drugs"},
+                        {"MedicationID": 6, "MedicationName": "Antipyretics"}
+                    ]
+                }
+            ],
+            "Allergies": [
+                {"AllergyID": 1, "AllergyName": "Pollen"}
+            ],
+            "LifestyleFactors": [
+                {"LifestyleFactorID": 1, "LifestyleFactorName": "Smoking"}
+            ],
+            "MedicalConditions": [
+                {"MedicalConditionID": 1, "MedicalConditionName": "Hypertension"},
+                {"MedicalConditionID": 2, "MedicalConditionName": "Obesity"}
+            ]
+        },
+        {
+            "PatientID": 2,
+            "Name": "Jane Smith",
+            "Age": 30,
+            "Gender": "Female",
+            "Address": "456 Oak St",
+            "ContactInfo": "jane@example.com",
+            "BloodType": "B",
+            "Region": "USA",
+            "WeightKg": 60,
+            "Diagnoses": [
+                {
+                    "DiagnosisID": 2,
+                    "DiseaseID": 3,
+                    "DateDiagnosed": "2023-02-10",
+                    "PredictionProbability": 0.7,
+                    "Symptoms": [
+                        {"SymptomID": 3, "SymptomName": "Headache"},
+                        {"SymptomID": 4, "SymptomName": "Fatigue"}
+                    ],
+                    "Medications": [
+                        {"MedicationID": 3, "MedicationName": "Pain relievers"}
+                    ]
+                }
+            ],
+            "Allergies": [
+                {"AllergyID": 2, "AllergyName": "Dust"}
+            ],
+            "LifestyleFactors": [
+                {"LifestyleFactorID": 2, "LifestyleFactorName": "Healthy Diet"}
+            ],
+            "MedicalConditions": [
+                {"MedicalConditionID": 3, "MedicalConditionName": "Diabetes"}
+            ]
+        }
+    ]
+}
