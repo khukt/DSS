@@ -20,8 +20,8 @@ lifestyle_factors_list = [factor['LifestyleFactorName'] for factor in medical_da
 medical_conditions_list = [condition['MedicalConditionName'] for condition in medical_data['MedicalConditions']]
 
 # Function to get IDs from names
-def get_ids(names, data, key):
-    return [item[key] for item in data if item[next(iter(item.values()))] in names]
+def get_ids(names, data, key, name_key):
+    return [item[key] for item in data if item[name_key] in names]
 
 # Function to predict diseases based on symptoms
 def predict_diseases(symptoms, knowledge_base):
@@ -124,7 +124,7 @@ st.write("Medical Conditions:", st.session_state["medical_conditions"])
 
 # Check Conditions
 if st.button("Check Conditions"):
-    symptom_ids = get_ids(st.session_state["symptoms"], medical_data['Symptoms'], 'SymptomID')
+    symptom_ids = get_ids(st.session_state["symptoms"], medical_data['Symptoms'], 'SymptomID', 'SymptomName')
     diseases = predict_diseases(symptom_ids, knowledge_base)
     
     st.subheader("Predicted Diseases")
