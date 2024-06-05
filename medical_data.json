@@ -1,0 +1,67 @@
+{
+    "Symptoms": [
+        {"SymptomID": 1, "SymptomName": "Fever"},
+        {"SymptomID": 2, "SymptomName": "Cough"},
+        {"SymptomID": 3, "SymptomName": "Headache"},
+        {"SymptomID": 4, "SymptomName": "Fatigue"},
+        {"SymptomID": 5, "SymptomName": "Shortness of breath"},
+        {"SymptomID": 6, "SymptomName": "Nausea"}
+    ],
+    "Allergies": [
+        {"AllergyID": 1, "AllergyName": "Pollen"},
+        {"AllergyID": 2, "AllergyName": "Dust"},
+        {"AllergyID": 3, "AllergyName": "Peanuts"},
+        {"AllergyID": 4, "AllergyName": "Shellfish"}
+    ],
+    "LifestyleFactors": [
+        {"LifestyleFactorID": 1, "LifestyleFactorName": "Smoking"},
+        {"LifestyleFactorID": 2, "LifestyleFactorName": "Healthy Diet"},
+        {"LifestyleFactorID": 3, "LifestyleFactorName": "Exercise"},
+        {"LifestyleFactorID": 4, "LifestyleFactorName": "Alcohol Consumption"}
+    ],
+    "MedicalConditions": [
+        {"MedicalConditionID": 1, "MedicalConditionName": "Hypertension"},
+        {"MedicalConditionID": 2, "MedicalConditionName": "Obesity"},
+        {"MedicalConditionID": 3, "MedicalConditionName": "Diabetes"},
+        {"MedicalConditionID": 4, "MedicalConditionName": "Heart Disease"}
+    ],
+    "Diseases": [
+        {"DiseaseID": 1, "DiseaseName": "Flu"},
+        {"DiseaseID": 2, "DiseaseName": "Asthma"},
+        {"DiseaseID": 3, "DiseaseName": "Migraine"},
+        {"DiseaseID": 4, "DiseaseName": "Anemia"},
+        {"DiseaseID": 5, "DiseaseName": "COVID-19"},
+        {"DiseaseID": 6, "DiseaseName": "Pneumonia"}
+    ],
+    "Medications": [
+        {"MedicationID": 1, "MedicationName": "Antiviral drugs"},
+        {"MedicationID": 2, "MedicationName": "Inhaled corticosteroids"},
+        {"MedicationID": 3, "MedicationName": "Pain relievers"},
+        {"MedicationID": 4, "MedicationName": "Iron supplements"},
+        {"MedicationID": 5, "MedicationName": "Antibiotics"},
+        {"MedicationID": 6, "MedicationName": "Antipyretics"}
+    ],
+    "DiseaseMedications": [
+        {"DiseaseMedicationID": 1, "DiseaseID": 1, "MedicationID": 1},
+        {"DiseaseMedicationID": 2, "DiseaseID": 2, "MedicationID": 2},
+        {"DiseaseMedicationID": 3, "DiseaseID": 3, "MedicationID": 3},
+        {"DiseaseMedicationID": 4, "DiseaseID": 4, "MedicationID": 4},
+        {"DiseaseMedicationID": 5, "DiseaseID": 5, "MedicationID": 5},
+        {"DiseaseMedicationID": 6, "DiseaseID": 6, "MedicationID": 5},
+        {"DiseaseMedicationID": 7, "DiseaseID": 1, "MedicationID": 6}
+    ],
+    "DiseaseSymptoms": [
+        {"DiseaseSymptomID": 1, "DiseaseID": 1, "SymptomID": 1},
+        {"DiseaseSymptomID": 2, "DiseaseID": 1, "SymptomID": 2},
+        {"DiseaseSymptomID": 3, "DiseaseID": 2, "SymptomID": 2},
+        {"DiseaseSymptomID": 4, "DiseaseID": 2, "SymptomID": 5},
+        {"DiseaseSymptomID": 5, "DiseaseID": 3, "SymptomID": 3},
+        {"DiseaseSymptomID": 6, "DiseaseID": 3, "SymptomID": 4},
+        {"DiseaseSymptomID": 7, "DiseaseID": 5, "SymptomID": 1},
+        {"DiseaseSymptomID": 8, "DiseaseID": 5, "SymptomID": 5},
+        {"DiseaseSymptomID": 9, "DiseaseID": 6, "SymptomID": 2},
+        {"DiseaseSymptomID": 10, "DiseaseID": 6, "SymptomID": 6},
+        {"DiseaseSymptomID": 11, "DiseaseID": 4, "SymptomID": 4},
+        {"DiseaseSymptomID": 12, "DiseaseID": 4, "SymptomID": 5}
+    ]
+}
