@@ -67,15 +67,22 @@ def suggest_medications(diseases, knowledge_base):
     return medications
 
 # Streamlit app
+st.set_page_config(page_title="Symptom Checker and Disease Predictor", layout="wide")
 st.title("Symptom Checker and Disease Predictor")
 
 # Patient information
 st.header("Patient Information")
-gender = st.selectbox("Gender", ["Male", "Female"])
-age = st.number_input("Age", min_value=0, max_value=120, value=25)
-weight = st.number_input("Weight (kg)", min_value=0.0, max_value=300.0, value=70.0)
-blood_type = st.selectbox("Blood Type", ["A", "B", "AB", "O"])
-region = st.selectbox("Region", regions)
+col1, col2, col3 = st.columns(3)
+with col1:
+    gender = st.selectbox("Gender", ["Male", "Female"])
+with col2:
+    age = st.number_input("Age", min_value=0, max_value=120, value=25)
+with col3:
+    weight = st.number_input("Weight (kg)", min_value=0.0, max_value=300.0, value=70.0)
+with col1:
+    blood_type = st.selectbox("Blood Type", ["A", "B", "AB", "O"])
+with col2:
+    region = st.selectbox("Region", regions)
 
 # Symptoms
 st.header("Symptoms")
@@ -83,7 +90,8 @@ symptom = st.selectbox("Symptom", symptoms_list)
 if "symptoms" not in st.session_state:
     st.session_state["symptoms"] = []
 if st.button("Add Symptom"):
-    st.session_state["symptoms"].append(symptom)
+    if symptom not in st.session_state["symptoms"]:
+        st.session_state["symptoms"].append(symptom)
 st.write("Symptoms:", st.session_state["symptoms"])
 
 # Food Allergies
@@ -92,7 +100,8 @@ food_allergy = st.selectbox("Food Allergy", food_allergies_list)
 if "food_allergies" not in st.session_state:
     st.session_state["food_allergies"] = []
 if st.button("Add Food Allergy"):
-    st.session_state["food_allergies"].append(food_allergy)
+    if food_allergy not in st.session_state["food_allergies"]:
+        st.session_state["food_allergies"].append(food_allergy)
 st.write("Food Allergies:", st.session_state["food_allergies"])
 
 # Medicine Allergies
@@ -101,7 +110,8 @@ medicine_allergy = st.selectbox("Medicine Allergy", medicine_allergies_list)
 if "medicine_allergies" not in st.session_state:
     st.session_state["medicine_allergies"] = []
 if st.button("Add Medicine Allergy"):
-    st.session_state["medicine_allergies"].append(medicine_allergy)
+    if medicine_allergy not in st.session_state["medicine_allergies"]:
+        st.session_state["medicine_allergies"].append(medicine_allergy)
 st.write("Medicine Allergies:", st.session_state["medicine_allergies"])
 
 # Lifestyle Factors
@@ -110,7 +120,8 @@ lifestyle = st.selectbox("Lifestyle", lifestyle_factors_list)
 if "lifestyle_factors" not in st.session_state:
     st.session_state["lifestyle_factors"] = []
 if st.button("Add Lifestyle Factor"):
-    st.session_state["lifestyle_factors"].append(lifestyle)
+    if lifestyle not in st.session_state["lifestyle_factors"]:
+        st.session_state["lifestyle_factors"].append(lifestyle)
 st.write("Lifestyle Factors:", st.session_state["lifestyle_factors"])
 
 # Medical Conditions
@@ -119,7 +130,8 @@ medical_condition = st.selectbox("Medical Condition", medical_conditions_list)
 if "medical_conditions" not in st.session_state:
     st.session_state["medical_conditions"] = []
 if st.button("Add Medical Condition"):
-    st.session_state["medical_conditions"].append(medical_condition)
+    if medical_condition not in st.session_state["medical_conditions"]:
+        st.session_state["medical_conditions"].append(medical_condition)
 st.write("Medical Conditions:", st.session_state["medical_conditions"])
 
 # Check Conditions
@@ -137,3 +149,4 @@ if st.button("Check Conditions"):
     st.subheader("Suggested Medications")
     for medication in medications:
         st.write(medication['MedicationName'])
+
