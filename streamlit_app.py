@@ -42,7 +42,8 @@ def predict_diseases(symptoms, knowledge_base):
     disease_predictions = [
         {
             "DiseaseID": disease_id,
-            "Probability": count / total_symptoms
+            "Probability": count / total_symptoms,
+            "SymptomIDs": [mapping['SymptomID'] for mapping in symptom_disease_map if mapping['DiseaseID'] == disease_id]
         }
         for disease_id, count in disease_counts.items()
     ]
@@ -148,10 +149,16 @@ if st.button("Check Conditions"):
     for disease in diseases:
         disease_name = next(d['DiseaseName'] for d in medical_data['Diseases'] if d['DiseaseID'] == disease['DiseaseID'])
         st.markdown(f"**{disease_name}** (Probability: {disease['Probability']:.2f})")
+        explanation = ", ".join(
+            [next(symptom['SymptomName'] for symptom in medical_data['Symptoms'] if symptom['SymptomID'] == sym_id) 
+             for sym_id in disease['SymptomIDs']]
+        )
+        st.write(f"*Based on the symptoms: {explanation}*")
     
     medications = suggest_medications(diseases, knowledge_base)
     
     st.subheader("Suggested Medications")
     medication_names = [medication['MedicationName'] for medication in medications]
     st.markdown("\n".join([f"- {med}" for med in medication_names]))
+    st.write("*These medications are suggested based on the predicted diseases.*")
 
